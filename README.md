@@ -4,7 +4,7 @@ This is an easy to implement tiny jQuery UI Widget that spawns a combobox that a
 
 ```javascript
 $( document ).ready(function() {
-    initializeComboBox('/path/cfcs/item.cfc', 'getItems', 'item_id', 'Please type item name or select from the list...');
+	initializeComboBox('/path/cfcs/item.cfc', 'getItems', 'item_id', 'Select or type an item..');
 	$( "#items" ).combobox();
 });
 ```
