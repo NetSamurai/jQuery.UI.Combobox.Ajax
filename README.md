@@ -7,7 +7,16 @@ $( document ).ready(function() {
 	initializeComboBox('/path/cfcs/item.cfc', 'getItems', 'item_id', 'Select or type an item..');
 	$( "#items" ).combobox();
 });
+
 ```
+
+| Parameter  | Description |
+| ------------- | ------------- |
+| path | relative path to datasource file |
+| method | the invoked function in the file |
+| html element | html element that stores the current selection |
+| placeholder text | the default text that appears in the select input |
+
 
 To integrate a select element with this widget, insert this html markup:
 ```html
@@ -35,5 +44,6 @@ object[0]
 
 The the following can be passed to the query as an argument to narrow the results:
 ```
-%#arguments.term#%
+%term%
 ```
+The name of the query is inside the "method" variable.
