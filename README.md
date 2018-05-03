@@ -37,10 +37,12 @@ The data that results from the Ajax call must be an array of objects, structured
 	function getItemExamples() {
 		result = [];
 		obj = [];
-		obj[0].value = 1;
-		obj[0].label = "Item 1";
-		obj[1].value = 2;
-		obj[1].label = "Item 2";
+		obj.value = 1;
+		obj.label = "Item 1";
+		array_push($result, $obj);
+		obj = [];
+		obj.value = 2;
+		obj.label = "Item 2";
 		array_push($result, $obj);
 		header("Content-type:application/json");
 		echo json_encode($result_array);
