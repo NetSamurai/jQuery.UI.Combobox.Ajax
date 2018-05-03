@@ -30,12 +30,16 @@ To integrate a select element with this widget, insert this html markup:
 </form>
 ```
 
-The data that results from the Ajax call must be an array of objects, structured with these attributes as a JSON:
+The data that results from the Ajax call must be an array of objects, structured with these attributes, then delivered as a JSON. Your implementation may vary depending on language used:
 ```php
 // php example of a valid structure to json_encode
 <?php
 	function getItemExamples() {
 		result = [];
+		// if included in the array, selecting 0 will reset selection to default state
+		obj = [];
+		obj.VALUE = 0;
+		obj.LABEL = "- None -";
 		obj = [];
 		obj.VALUE = 1;
 		obj.LABEL = "Item 1";
@@ -48,7 +52,6 @@ The data that results from the Ajax call must be an array of objects, structured
 		echo json_encode($result_array);
 	}
 ?>
-// for other languages: use their native array of object methods to package objects.
 ```
 
 The the following can be passed to the query as an argument to narrow the results:
