@@ -49,7 +49,7 @@ The data that results from the Ajax call must be an array of objects, structured
 	}
 ?>
 
-Other languages can similarly package data in their native array of key:pair objects.
+// For other languages: use their native array of key:pair methods to package objects.
 ```
 
 The the following can be passed to the query as an argument to narrow the results:
