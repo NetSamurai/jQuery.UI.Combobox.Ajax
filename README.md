@@ -1,6 +1,6 @@
-# jquery.ui.combobox.ajax
+# jquery.ui.combobox.ajax.js
 
-This is an easy to implement tiny jQuery UI Widget that spawns a combobox that allows a user to search, select, from a select list, and throttles ajax calls against a datasource! Example coming soon..
+This is an easy to implement tiny jQuery UI Widget that spawns a combobox that allows a user to search, select, from a select list, and throttles ajax calls against a datasource! <a href="https://ravenmyst.net/work/combobox/">Demo/Example here</a>
 
 ```javascript
 $( document ).ready(function() {
