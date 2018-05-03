@@ -31,16 +31,13 @@ To integrate a select element with this widget, insert this html markup:
 ```
 
 The data that results from the Ajax call must be an array of objects, structured with these attributes as a JSON:
-```
-// in theory
-object[array_position]
-	obj[array_position].value = 1;
-	obj[array_position].label = "Item 1";
-
-// real example
-object[0]
-	obj[0].value = 5;
-	obj[1].label = "Item 5";
+```php
+// php example of a valid structure to json_encode
+result = [];
+obj = [];
+obj[0].value = 5;
+obj[0].label = "Item 5";
+array_push($result, $obj);
 ```
 
 The the following can be passed to the query as an argument to narrow the results:
