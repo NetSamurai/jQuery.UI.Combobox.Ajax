@@ -9,7 +9,7 @@ $( document ).ready(function() {
 });
 
 ```
-
+**initializeComboBox()**
 | Parameter  | Description |
 | ------------- | ------------- |
 | path | relative path to datasource file |
