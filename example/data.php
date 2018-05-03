@@ -4,21 +4,39 @@
 function getTestItemsData() {
     $result_array = [];
 
-    // values
-    $test_var["LABEL"] = "Blue";
+    // in practice, this is is is generated from a query
+    $test_var["LABEL"] = "- None - ";
     $test_var["VALUE"] = "0";
     array_push($result_array, $test_var);
-    $test_var["LABEL"] = "Red";
+    $test_var["LABEL"] = "Blue";
     $test_var["VALUE"] = "1";
     array_push($result_array, $test_var);
-    $test_var["LABEL"] = "Green";
+    $test_var["LABEL"] = "Red";
     $test_var["VALUE"] = "2";
     array_push($result_array, $test_var);
-    $test_var["LABEL"] = "White";
+    $test_var["LABEL"] = "Green";
     $test_var["VALUE"] = "3";
     array_push($result_array, $test_var);
-    $test_var["LABEL"] = "Black";
+    $test_var["LABEL"] = "White";
     $test_var["VALUE"] = "4";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Black";
+    $test_var["VALUE"] = "5";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Purple";
+    $test_var["VALUE"] = "6";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Magenta";
+    $test_var["VALUE"] = "7";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Cyan";
+    $test_var["VALUE"] = "8";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Brown";
+    $test_var["VALUE"] = "9";
+    array_push($result_array, $test_var);
+    $test_var["LABEL"] = "Teal";
+    $test_var["VALUE"] = "10";
     array_push($result_array, $test_var);
 
     return $result_array;
