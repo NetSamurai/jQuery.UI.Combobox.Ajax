@@ -24,19 +24,23 @@
 
     <body>
         <?php
+            include 'data.php';
+
+            if (isset($_POST["item_id"]) && !empty($_POST["item_id"])) {
+                $selected_str = getItemById($_POST["item_id"]);
+            }      
+            
             echo   "<form action='./' id='searchForm' method='post'>
                         <input type='hidden' name='item_id' id='item_id'>
                         Color Selector: 
                         <select id='items' name='items' size='25'>
-                            <option selected='selected'></option>
+                            <option selected='selected'>".$selected_str."</option>
                         </select>
                     </form>";
 
             if (isset($_POST["item_id"]) && !empty($_POST["item_id"])) {
-                echo "The id of the color you selected was " . $_POST['item_id'];
-            } else {  
-                echo "No color has been selected yet.";
-            }        
+                echo "You have selected " . $selected_str . "!";
+            }    
         ?>
 
         <script>

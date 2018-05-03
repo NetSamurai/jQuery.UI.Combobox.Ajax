@@ -46,6 +46,19 @@ function getTestItems($term) {
     echo json_encode($result_array);
 }
 
+function getItemById($id) {
+    $data = getTestItemsData();
+
+    $result_str = "";
+    foreach ($data as $element) {
+        $temp_element = strtolower(trim($element["VALUE"]));
+        if($temp_element === $id) {
+            $result_str = $element["LABEL"];
+        }
+    }
+    return $result_str;
+}
+
 // ajax switch
 if(isset($_GET['method']) && !empty($_GET['method'])) {
     $method = $_GET['method'];
