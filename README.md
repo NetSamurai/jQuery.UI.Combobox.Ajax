@@ -9,14 +9,15 @@ $( document ).ready(function() {
 });
 
 ```
+
 **initializeComboBox()**
+
 | Parameter  | Description |
 | ------------- | ------------- |
 | path | relative path to datasource file |
 | method | the invoked function in the file |
 | html element | html element that stores the current selection |
 | placeholder text | the default text that appears in the select input |
-
 
 To integrate a select element with this widget, insert this html markup:
 ```html
