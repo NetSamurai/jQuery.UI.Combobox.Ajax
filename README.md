@@ -48,12 +48,32 @@ The data that results from the Ajax call must be an array of objects, structured
 		echo json_encode($result_array);
 	}
 ?>
-
-// For other languages: use their native array of key:pair methods to package objects.
+// for other languages: use their native array of object methods to package objects.
 ```
 
 The the following can be passed to the query as an argument to narrow the results:
 ```
 %term%
 ```
+
+A simple way the term can be used to filter the result in php is as follows:
+```php
+$data = getTestItemsData();
+
+$result_array = [];
+
+foreach ($data as $element) {
+	$temp_element = strtolower(trim($element["LABEL"]));
+	if(strlen(trim($term)) !== 0) {
+		$pos = strpos($temp_element, strtolower(trim($term)));
+		if ($pos !== false) {
+			array_push($result_array, $element);
+		}
+	} else {
+		array_push($result_array, $element);
+	}
+	
+}
+```
+
 The name of the query is inside the "method" variable.
