@@ -33,7 +33,6 @@ To integrate a select element with this widget, insert this html markup:
 The data that results from the Ajax call must be an array of objects, structured with these attributes, then delivered as a JSON. Your implementation may vary depending on language used:
 ```php
 // basic php example of the array of objects structure
-// for a full working example, check <a href="https://github.com/ravenmyst/jQuery.UI.Combobox.Ajax/blob/master/example/data.php" target="_blank">/examples/data.php</a>
 <?php
 	// this function name must match the name of the method above
 	function getItems() {
@@ -57,25 +56,14 @@ The data that results from the Ajax call must be an array of objects, structured
 ?>
 ```
 
-The the following can be passed to the query as an argument to narrow the results:
+For a full working code example, check <a href="https://github.com/ravenmyst/jQuery.UI.Combobox.Ajax/blob/master/example/data.php" target="_blank">/examples/data.php</a>
+
+To filter the query results, use this GET variable:
 ```
-%term%
+term
 ```
 
 A simple way the term can be used to filter the result in php is as follows:
-```php
-// $data is your array of objects
-$result_array = [];
-
-foreach ($data as $element) {
-	$temp_element = strtolower(trim($element["LABEL"]));
-	if(strlen(trim($term)) !== 0) {
-		$pos = strpos($temp_element, strtolower(trim($term)));
-		if ($pos !== false) {
-			array_push($result_array, $element);
-		}
-	} else {
-		array_push($result_array, $element);
 	}
 	
 }
