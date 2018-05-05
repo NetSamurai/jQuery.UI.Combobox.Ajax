@@ -25,7 +25,7 @@ To integrate a select element with this widget, insert this html markup:
 	<input type="hidden" name="item_id" id="item_id">
 	Item ID: 
 	<select id="items" size="25">
-	<option selected="selected">{item.VALUE}</option>
+	<option selected="selected">{item.LABEL}</option>
 	</select>
 </form>
 ```
