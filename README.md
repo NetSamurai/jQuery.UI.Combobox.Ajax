@@ -55,16 +55,9 @@ The data that results from the Ajax call must be an array of objects, structured
 	}
 ?>
 ```
-
-For a full working code example, check <a href="https://github.com/ravenmyst/jQuery.UI.Combobox.Ajax/blob/master/example/data.php" target="_blank">/examples/data.php</a>
-
 To filter the query results, use this GET variable:
 ```
 term
 ```
 
-A simple way the term can be used to filter the result in php is as follows:
-	}
-	
-}
-```
+For a full working code example, check <a href="https://github.com/ravenmyst/jQuery.UI.Combobox.Ajax/blob/master/example/data.php" target="_blank">/examples/data.php</a>
