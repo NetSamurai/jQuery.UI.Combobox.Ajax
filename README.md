@@ -4,7 +4,7 @@ This is an easy to implement tiny jQuery UI Widget that spawns a combobox that a
 
 ```javascript
 $( document ).ready(function() {
-	initializeComboBox('/path/cfcs/item.cfc', 'getItems', 'item_id', 'Select or type an item..');
+	initializeComboBox('data.php', 'getItems', 'item_id', 'Select or type an item..');
 	$( "#items" ).combobox();
 });
 
@@ -21,11 +21,11 @@ $( document ).ready(function() {
 
 To integrate a select element with this widget, insert this html markup:
 ```html
-<form action="#cgi.script_name#" id="searchForm" method="post">
+<form action="./" id="searchForm" method="post">
 	<input type="hidden" name="item_id" id="item_id">
 	Item ID: 
 	<select id="items" size="25">
-	<option selected="selected">#displayName#</option>
+	<option selected="selected">{item.VALUE}</option>
 	</select>
 </form>
 ```
@@ -34,9 +34,10 @@ The data that results from the Ajax call must be an array of objects, structured
 ```php
 // php example of a valid structure to json_encode
 <?php
-	function getItemExamples() {
+	// this function name must match the name of the method above
+	function getItems() {
 		result = [];
-		// if included in the array, selecting 0 will reset selection to default state
+		// when included in the array, selecting 0 will reset combobox to default state
 		obj = [];
 		obj.VALUE = 0;
 		obj.LABEL = "- None -";
@@ -61,8 +62,7 @@ The the following can be passed to the query as an argument to narrow the result
 
 A simple way the term can be used to filter the result in php is as follows:
 ```php
-$data = getTestItemsData();
-
+// $data is your array of objects
 $result_array = [];
 
 foreach ($data as $element) {
@@ -78,5 +78,3 @@ foreach ($data as $element) {
 	
 }
 ```
-
-The name of the query is inside the "method" variable.
